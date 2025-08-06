@@ -94,6 +94,10 @@
     <title>jake_vichnis</title>
     <style>
         /* reset margins */
+        
+
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=JetBrains+Mono&family=Source+Code+Pro&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -101,9 +105,12 @@
         }
 
         body {
-            font-family: "Cascadia Mono", monospace;
-            background-color: #FAFAFA;
+            /* your new font stack */
+            font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', Menlo, Consolas, 'Liberation Mono', monospace;
+            background-color: #fff;
             color: #000;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
         /* HEADER */
@@ -125,7 +132,7 @@
         nav {
             display: flex;
             gap: 3rem;
-            font-size: 1.75rem;
+            font-size: 1.25rem;
         }
 
             nav a {
@@ -142,14 +149,14 @@
             display: flex;
             align-items: flex-start;
             max-width: 1000px;
-            margin: 3rem auto;
+            margin: 6rem auto;
             padding: 0 1rem;
-            gap: 8rem;
+            gap: 16rem;
         }
 
             /* left: image */
             .content img {
-                max-width: 400px; /* adjust to taste */
+                max-width: 600px; /* adjust to taste */
                 height: auto;
                 flex-shrink: 0;
                 border-radius: 4px;
