@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0" />
-    <title>exp--jake_vichnis</title>
+    <title>jake_vichnis</title>
     <style>
         /* reset */
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=JetBrains+Mono&family=Source+Code+Pro&display=swap');
@@ -58,116 +58,103 @@
                     text-decoration: underline;
                 }
 
-        /* PAGE CONTENT */
-        .content-wrapper {
-            display: flex;
-            align-items: flex-start;
-            margin: 3rem auto;
-            padding: 0 1rem;
-            gap: 26rem; /* stays rem if you intended 416px of space */
+        .container {
+            max-width: 56.25rem; /* 900px→56.25rem */
+            margin: 3.75rem auto; /* 60px→3.75rem */
+            padding: 0 1.25rem; /* 20px→1.25rem */
         }
 
-        .image-container {
-            margin-left: 10rem;
-            flex-shrink: 0;
+        .project {
+            margin-bottom: 3.125rem; /* 50px→3.125rem */
         }
 
-            .image-container img {
-                display: block;
-                max-width: 100vw;
-                width: auto;
-                height: auto;
-                border-radius: 0.25rem; /* 4px→0.25rem */
-            }
-
-        .text {
-            flex: 1;
-            text-align: center;
+        .project-title {
             font-size: 1.375rem; /* 22px→1.375rem */
-            margin-top: 12.5rem; /* 200px→12.5rem */
-            max-width: 75rem; /* 1200px→75rem */
+            font-weight: bold;
+            color: #131C26;
+            text-decoration: none;
         }
 
-            .text p {
-                margin-bottom: 2.5rem;
-                line-height: 1.6;
-            }
+        .project-meta {
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 0.9375rem; /* 15px→0.9375rem */
+            margin-top: 0.3125rem; /* 5px→0.3125rem */
+            color: #555;
+        }
 
-        /* For Mobile use */
+        .project-desc {
+            font-size: 1rem; /* 16px→1rem */
+            margin-top: 0.5rem; /* 8px→0.5rem */
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
+            /* header stacks like on index.html */
             header {
                 flex-direction: column;
                 align-items: flex-start;
-                padding: 1.5rem 2rem;
+                padding: 1.5rem 2rem; /* 24px→1.5rem,32px→2rem */
             }
 
             .logo {
                 margin-left: 0;
-                margin-bottom: 1rem;
-                font-size: 2rem;
+                margin-bottom: 1rem; /* 16px→1rem */
+                font-size: 2rem; /* 32px→2rem */
             }
 
+            /* nav wraps and shrinks font like on index.html */
             nav {
                 flex-wrap: wrap;
-                gap: 1rem;
-                font-size: 1.1rem;
+                gap: 1rem; /* 16px→1rem */
+                font-size: 1.1rem; /* 17.6px→1.1rem */
+                padding: 0; /* remove any extra padding */
             }
 
-            .content-wrapper {
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
-                margin: 2rem 1rem;
-                padding: 0;
+            /* container padding as before */
+            .container {
+                padding: 0 0.9375rem; /* 15px→0.9375rem */
             }
-
-            .image-container {
-                margin: 0;
-                max-width: 80%;
-            }
-
-                .image-container img {
-                    width: 100%;
-                    height: auto;
-                }
-
-            .text {
-                margin-top: 0;
-                font-size: 1.1rem;
-                text-align: left;
-            }
-
-                .text p {
-                    margin-bottom: 1.5rem;
-                }
         }
     </style>
 </head>
-<body>
 
+<body>
     <header>
         <div class="logo">jake_vichnis</div>
         <nav>
-            <a href="code.html">code</a>
-            <a href="index.html" class="active">main</a>
+            <a href="code.html" class="active">code</a>
+            <a href="index.html">main</a>
             <a href="gameplan.html">gameplan</a>
             <a href="exp.html">exp</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <div class="content-wrapper">
-        <div class="image-container">
-            <img src="jakevichnis.github.io/pro_pic_2.png" alt="Jake Vichnis">
+    <div class="container">
+        <h1 style="font-style: italic; margin-bottom: 0.5rem; font-size: 4rem;">vinyl grooves to vector spaces…</h1>
+        <br />
+        <h2 style="font-weight: bold;">About Jake Vichnis</h2>
+
+        <div class="project">
+            <a class="project-title" href="https://github.com/jakevichnis/Gradient-Descent-Optimizer/tree/main" target="_blank">Gradient Descent Portfolio Optimizer</a>
+            <div class="project-meta">Java · Custom Math Engine · Mean-Variance Optimization</div>
+            <div class="project-desc">→ A tool that uses gradient descent to calculate optimal asset weights using custom matrix algebra and covariance matrices. Designed for portfolio management use.</div>
         </div>
-        <div class="text">
 
-            <p>From Grammy-caliber studios to quant-grade algorithms, Jake Vichnis fuses creative vision with mathematical precision.</p>
-            <p style="font-style: italic;">"Welcome to my digital home—where a background in music production meets a passion for AI, machine learning, and quantitative finance. Explore my journey, dive into code-driven projects, and see how I translate patterns in sound into patterns in data."</p>
-
-
+        <div class="project">
+            <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/c867-scripting-and-programming-applications.git" target="_blank">C++ Parser with Python File Converter</a>
+            <div class="project-meta">C++ · Python · File Parsing</div>
+            <div class="project-desc">→ A dual-stage toolset featuring a C++ parser to read and interpret structured text data and a Python converter to transform parsed output into formatted files for seamless data automation.</div>
         </div>
+
+        <div class="project">
+            <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/d288-back-end-programming.git" target="_blank">Travel Excursion Back-End</a>
+            <div class="project-meta">Java · Spring Framework · MySQL · Angular</div>
+            <div class="project-desc">→ An enterprise-style backend built in Spring Framework connected to a MySQL database and Angular front end, demonstrating object-oriented design, RESTful services, and design-pattern implementation in a stateful lab environment.</div>
+        </div>
+
+
+
     </div>
-
 </body>
 </html>
