@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>jake_vichnis</title>
+    <style>
+        /* reset */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=JetBrains+Mono&family=Source+Code+Pro&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #FAFAFA;
+        }
+
+        body {
+            font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', Menlo, Consolas, 'Liberation Mono', monospace;
+            background-color: #FAFAFA;
+            color: #000;
+            font-size: 1rem; /* was 16px */
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 3rem;
+            box-shadow: 0 0.5rem 1.75rem rgba(0, 0, 0, 0.18); /* 8px→0.5rem,28px→1.75rem */
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #FAFAFA;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            margin-left: 3.5rem;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            gap: 3rem;
+            font-size: 1.25rem;
+        }
+
+            nav a {
+                text-decoration: none;
+                color: #000;
+            }
+
+                nav a.active {
+                    text-decoration: underline;
+                }
+
+        .container {
+            max-width: 56.25rem; /* 900px→56.25rem */
+            margin: 3.75rem auto; /* 60px→3.75rem */
+            padding: 0 1.25rem; /* 20px→1.25rem */
+        }
+
+        .project {
+            margin-bottom: 3.125rem; /* 50px→3.125rem */
+        }
+
+        .project-title {
+            font-size: 1.375rem; /* 22px→1.375rem */
+            font-weight: bold;
+            color: #131C26;
+            text-decoration: none;
+        }
+
+        .project-meta {
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 0.9375rem; /* 15px→0.9375rem */
+            margin-top: 0.3125rem; /* 5px→0.3125rem */
+            color: #555;
+        }
+
+        .project-desc {
+            font-size: 1rem; /* 16px→1rem */
+            margin-top: 0.5rem; /* 8px→0.5rem */
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            /* header stacks like on index.html */
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem 2rem; /* 24px→1.5rem,32px→2rem */
+            }
+
+            .logo {
+                margin-left: 0;
+                margin-bottom: 1rem; /* 16px→1rem */
+                font-size: 2rem; /* 32px→2rem */
+            }
+
+            /* nav wraps and shrinks font like on index.html */
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem; /* 16px→1rem */
+                font-size: 1.1rem; /* 17.6px→1.1rem */
+                padding: 0; /* remove any extra padding */
+            }
+
+            /* container padding as before */
+            .container {
+                padding: 0 0.9375rem; /* 15px→0.9375rem */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">jake_vichnis</div>
+        <nav>
+            <a href="code.html">code</a>
+            <a href="index.html">main</a>
+            <a href="gameplan.html" class="active">gameplan</a>
+            <a href="exp.html">exp</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 style="font-style: italic; margin-bottom: 0.5rem; font-size: 4rem;">_loading journey.exe...</h1>
+        <br />
+        <br />
+        <h2 style="font-weight: bold;">About Jake Vichnis</h2>
+
+        <div class="project">
+            <p>Jake Vichnis brings a unique blend of creative vision and analytical rigor to the worlds of technology, quantitative finance, and AI. Though his roots lie in music production—shaped by studio work on Grammy-winning projects at Progressive Musik Group and years guiding aspiring artists at Third Street Music School Settlement—this site highlights his evolution from artistic creator to quant developer and AI specialist.</p>
+        </div>
+        <h1>Musical Roots & Early Career</h1>
+        <div class="project">
+            <p>Jake began as a library technician while studying Audio Technology at The City College of New York before honing his technical skills as a production assistant on Grammy-winning projects. Drawing on those studio experiences, he began teaching and designed a hands-on music production curriculum for students-teaching them how to craft beats, mix tracks, and tell stories through sound. That formative chapter instilled in him a deep appreciation for pattern, structure, and disciplined practice.</p>
+        </div>
+        <h1>First Lines of Code:</h1>
+        <h1>December 2021</h1>
+        <div class="project">
+            <p>Inspired by the patterns of music, Jake wrote his first Python script, quickly recognizing that algorithms—like melodies—could solve real-world problems. What began as simple data parsing soon ignited a passion for the mathematical foundations beneath every computation.</p>
+        </div>
+
+        <h1>Mathematical Foundation to Quant & AI</h1>
+        <div class="project">
+            <p>
+                From 2022 to 2025 Jake built the proper mathematical foundation and immersed himself in advanced quantitative methods: deploying multivariate calculus to fine-tune gradient descent routines, applying matrix decompositions and eigenvalue analysis to build and invert covariance matrices for portfolio optimization, and leveraging probability theory and statistical inference to model risk and forecast market behavior. He put theory into practice with projects like his Gradient Descent Portfolio Optimizer, where custom partial-derivative implementations and adaptive line searches drive asset-weight calculations, and by architecting an upcoming HFT Strategy Engine that relies on discrete-math–informed data structures and sub-microsecond execution in C++.
+            </p>
+            <br />
+            <p>
+                On the AI front, Jake’s C++–based multiple linear regression program laid the groundwork for Python experimentation. He explored tensor operations and automatic differentiation in PyTorch—applying concepts from linear algebra (tensor contraction, singular value decomposition) and optimization theory (momentum methods, adaptive learning rates)—to prototype neural networks and improve convergence on classification tasks.
+            </p>
+        </div>
+        <br />
+
+        <h1 style="font-style: italic;">Signature Projects & Technical Highlights</h1>
+        <div class="project">
+            <a class="project-title" href="https://github.com/jakevichnis/asset_manager.git" target="_blank">* Asset Manager</a>
+            <div class="project-meta">Python · OOP · File I/O · SQLite3</div>
+            <div class="project-desc">→ A command-line tool for tracking, validating, and persisting financial assets with clean object-oriented patterns and stochastic simulation capabilities.</div>
+        </div>
+
+        <div class="project">
+            <a class="project-title" href="https://github.com/jakevichnis/Gradient-Descent-Optimizer/tree/main" target="_blank">* Gradient Descent Portfolio Optimizer</a>
+            <div class="project-meta">Java · Custom Math Engine · Mean-Variance Optimization</div>
+            <div class="project-desc">→ Implements gradient descent and covariance matrix algebra to compute optimal portfolio weights with precision and performance.</div>
+        </div>
+
+        <div class="project">
+            <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/c867-scripting-and-programming-applications.git" target="_blank">* Parser with Python File Converter</a>
+            <div class="project-meta">C++ · Python · File Parsing</div>
+            <div class="project-desc">→ A two-stage pipeline: a C++ module reads structured text data, and a Python script formats it for downstream analytics.</div>
+        </div>
+
+        <div class="project">
+            <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/d288-back-end-programming.git" target="_blank">* Travel Excursion Back-End</a>
+            <div class="project-meta">Java · Spring Framework · MySQL · Angular</div>
+            <div class="project-desc">→ Simulates a guitar store’s inventory system with real-time max/min stock validation, “Buy Now” purchase workflow, unit tests, and containerized deployment.</div>
+        </div>
+
+
+        <div class="project">
+            <div class="project-title">UPCOMING – HFT Strategy Engine</div>
+            <div class="project-meta">C++ · Low-Latency · Market Data · Python (Prototyping)</div>
+            <div class="project-desc">→ Core order execution in C++ for sub-microsecond latency, with Python bindings for rapid strategy development and analytics.</div>
+        </div>
+
+        <h1>The Road Ahead:</h1>
+        <h1>Quant, AI/ML &</h1>
+        <h1>Finance</h1>
+        <br />
+        <div class="project">
+            <p>
+                Now completing his B.S. in Computer Science at Western Governors University (graduating October 2025), Jake is laser-focused on roles and internships that merge:
+            </p>
+            <br />
+            <p>1. <b>Quantitative Development - </b></p>
+            <p>Crafting algorithmic trading systems in C++ for minimal latency</p>
+            <p>2. <b>Data Science & AI/ML –</b></p>
+            <p>Building scalable models and pipelines with PyTorch and TensorFlow</p>
+            <p>3. <b>Cloud & DevOps – </b></p>
+            <p>Containerizing microservices with Docker and deploying to cloud platforms</p>
+            <br />
+            <p>He’s actively seeking opportunities in tech-driven finance, where his creative intuition, mathematical inclination, and full-stack coding expertise can deliver real-world impact.</p>
+        </div>
+
+
+    </div>
+</body>
+</html>
