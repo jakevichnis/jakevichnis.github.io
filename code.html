@@ -88,24 +88,34 @@
             line-height: 1.6;
         }
 
-        @media (max-width: 37.5rem) { /* 600px→37.5rem */
-            nav {
+        @media (max-width: 768px) {
+            /* header stacks like on index.html */
+            header {
                 flex-direction: column;
-                height: auto;
-                padding: 1.25rem; /* 20px→1.25rem */
                 align-items: flex-start;
+                padding: 1.5rem 2rem; /* 24px→1.5rem,32px→2rem */
             }
 
-                nav ul {
-                    flex-direction: column;
-                    gap: 0.625rem; /* 10px→0.625rem */
-                    margin-top: 0.625rem; /* 10px→0.625rem */
-                }
+            .logo {
+                margin-left: 0;
+                margin-bottom: 1rem; /* 16px→1rem */
+                font-size: 2rem; /* 32px→2rem */
+            }
 
+            /* nav wraps and shrinks font like on index.html */
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem; /* 16px→1rem */
+                font-size: 1.1rem; /* 17.6px→1.1rem */
+                padding: 0; /* remove any extra padding */
+            }
+
+            /* container padding as before */
             .container {
                 padding: 0 0.9375rem; /* 15px→0.9375rem */
             }
         }
+
     </style>
 </head>
 
