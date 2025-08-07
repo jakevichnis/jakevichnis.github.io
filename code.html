@@ -24,46 +24,39 @@
             line-height: 1.6;
         }
 
-        nav {
-            background-color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 3rem;
+            box-shadow: 0 0.5rem 1.75rem rgba(0, 0, 0, 0.18); /* 8px→0.5rem,28px→1.75rem */
             position: sticky;
             top: 0;
-            z-index: 1000;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 40px;
+            z-index: 10;
+            background: #FAFAFA;
         }
 
-            nav .logo {
-                font-size: 26px;
-                font-weight: bold;
+        .logo {
+            font-size: 2.5rem;
+            margin-left: 3.5rem;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            gap: 3rem;
+            font-size: 1.25rem;
+        }
+
+            nav a {
+                text-decoration: none;
+                color: #000;
             }
 
-            nav ul {
-                list-style: none;
-                display: flex;
-                gap: 25px;
-                margin: 0;
-                padding: 0;
-            }
-
-                nav ul li {
-                    display: inline;
+                nav a.active {
+                    text-decoration: underline;
                 }
-
-                    nav ul li a {
-                        text-decoration: none;
-                        color: #131C26;
-                        font-weight: bold;
-                        font-size: 16px;
-                    }
-
-                        nav ul li a:hover {
-                            text-decoration: underline;
-                        }
 
         .container {
             max-width: 900px;
@@ -117,7 +110,7 @@
 </head>
 
 <body>
-    <!--<nav>-->
+    <header>
         <div class="logo">jake_vichnis</div>
         <nav>
             <a href="code.html">code</a>
@@ -126,76 +119,77 @@
             <a href="exp.html">exp</a>
             <a href="contact.html">Contact</a>
         </nav>
+    </header>
 
-        <div class="container">
-            <p style="font-style: italic;">* Click project title to visit code repository</p>
+    <div class="container">
+        <p style="font-style: italic;">* Click project title to visit code repository</p>
 
-            <div class="project">
-                <a class="project-title" href="https://github.com/jakevichnis/Gradient-Descent-Optimizer/tree/main" target="_blank">Gradient Descent Portfolio Optimizer</a>
-                <div class="project-meta">Java · Custom Math Engine · Mean-Variance Optimization</div>
-                <div class="project-desc">→ A tool that uses gradient descent to calculate optimal asset weights using custom matrix algebra and covariance matrices. Designed for portfolio management use.</div>
-            </div>
-
-            <div class="project">
-                <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/c867-scripting-and-programming-applications.git" target="_blank">C++ Parser with Python File Converter</a>
-                <div class="project-meta">C++ · Python · File Parsing</div>
-                <div class="project-desc">→ A dual-stage toolset featuring a C++ parser to read and interpret structured text data and a Python converter to transform parsed output into formatted files for seamless data automation.</div>
-            </div>
-
-            <div class="project">
-                <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/d288-back-end-programming.git" target="_blank">Travel Excursion Back-End</a>
-                <div class="project-meta">Java · Spring Framework · MySQL · Angular</div>
-                <div class="project-desc">→ An enterprise-style backend built in Spring Framework connected to a MySQL database and Angular front end, demonstrating object-oriented design, RESTful services, and design-pattern implementation in a stateful lab environment.</div>
-            </div>
-
-            <div class="project">
-                <a class="project-title" href="https://github.com/jakevichnis/asset_manager.git" target="_blank">Asset Manager</a>
-                <div class="project-meta">Python · OOP · File I/O · SQLite3</div>
-                <div class="project-desc">→ A command-line application that tracks, validates, and persists financial asset records using object-oriented design and file operations for reliable portfolio monitoring.</div>
-            </div>
-
-            <div class="project">
-                <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/d287-java-frameworks.git" target="_blank">Guitar Store Inventory (Java Frameworks Project)</a>
-                <div class="project-meta">Java · Spring Boot · HTML/CSS · Unit Testing</div>
-                <div class="project-desc">→ A Spring Boot application simulating a guitar store’s inventory with customized HTML interfaces, “Buy Now” purchase logic, max/min stock validation, sample data seeding, and comprehensive unit tests.</div>
-            </div>
-
-            <div class="project">
-                <a class="project-title" href="https://github.com/jakevichnis/linear_regression.git" target="_blank">AI Linear Regression</a>
-                <div class="project-meta">C++ · Machine Learning · Linear Regression</div>
-                <div class="project-desc">→ A C++ console program that conducts a political survey, trains a multiple linear regression model via gradient descent on historical CSV data, and predicts user political affiliation with file-based data persistence.</div>
-            </div>
-
-            <div class="project">
-                <a class="project-title" href="https://github.com/jakevichnis/library_website.git" target="_blank">Library Website</a>
-                <div class="project-meta">HTML · CSS · JavaScript</div>
-                <div class="project-desc">→ A fully responsive, multi-page web interface for a mock library, complete with dynamic gallery, contact form, and cart functionality powered by vanilla JavaScript and browser storage.</div>
-            </div>
-
-            <div class="project">
-                <div class="project-title">UPCOMING – HFT Strategy Engine</div>
-                <div class="project-meta">C++ · Low-Latency · Market Data · Python (Prototyping)</div>
-                <div class="project-desc">→ A next-gen engine for high-frequency trading: core matching and execution written in C++ for ultra-low latency, with Python bindings for rapid strategy prototyping, real-time analytics, and risk management integration.</div>
-            </div>
-
-            <div class="project">
-                <div class="project-title">UPCOMING – Advanced Java – Landon Hotel Localization</div>
-                <div class="project-meta">Java · Spring Boot · Angular · Multithreading · Docker</div>
-                <div class="project-desc">→ An enhanced Spring-Angular application featuring multithreaded English/French resource bundles, real-time time-zone conversion (ET/MT/UTC), and multi-currency display. Containerized via Docker for seamless deployment and backed by GitLab CI/CD.</div>
-            </div>
-
-            <div class="project">
-                <div class="project-title">UPCOMING – Lightweight Quant Backtester</div>
-                <div class="project-meta">Python · Pandas · Backtesting · Strategy Prototyping</div>
-                <div class="project-desc">→ A lightweight Python-based backtesting engine that allows rapid development and simulation of quant trading strategies, with metrics tracking and data slicing via pandas.</div>
-            </div>
-
-            <div class="project">
-                <div class="project-title">UPCOMING – ML Financial Signal Predictor</div>
-                <div class="project-meta">Python · Machine Learning · Sklearn · Time-Series</div>
-                <div class="project-desc">→ A predictive ML model trained on financial indicators and historical prices, leveraging sklearn pipelines and time-series cross-validation to generate actionable trade signals.</div>
-            </div>
-
+        <div class="project">
+            <a class="project-title" href="https://github.com/jakevichnis/Gradient-Descent-Optimizer/tree/main" target="_blank">Gradient Descent Portfolio Optimizer</a>
+            <div class="project-meta">Java · Custom Math Engine · Mean-Variance Optimization</div>
+            <div class="project-desc">→ A tool that uses gradient descent to calculate optimal asset weights using custom matrix algebra and covariance matrices. Designed for portfolio management use.</div>
         </div>
+
+        <div class="project">
+            <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/c867-scripting-and-programming-applications.git" target="_blank">C++ Parser with Python File Converter</a>
+            <div class="project-meta">C++ · Python · File Parsing</div>
+            <div class="project-desc">→ A dual-stage toolset featuring a C++ parser to read and interpret structured text data and a Python converter to transform parsed output into formatted files for seamless data automation.</div>
+        </div>
+
+        <div class="project">
+            <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/d288-back-end-programming.git" target="_blank">Travel Excursion Back-End</a>
+            <div class="project-meta">Java · Spring Framework · MySQL · Angular</div>
+            <div class="project-desc">→ An enterprise-style backend built in Spring Framework connected to a MySQL database and Angular front end, demonstrating object-oriented design, RESTful services, and design-pattern implementation in a stateful lab environment.</div>
+        </div>
+
+        <div class="project">
+            <a class="project-title" href="https://github.com/jakevichnis/asset_manager.git" target="_blank">Asset Manager</a>
+            <div class="project-meta">Python · OOP · File I/O · SQLite3</div>
+            <div class="project-desc">→ A command-line application that tracks, validates, and persists financial asset records using object-oriented design and file operations for reliable portfolio monitoring.</div>
+        </div>
+
+        <div class="project">
+            <a class="project-title" href="https://gitlab.com/wgu-gitlab-environment/student-repos/jvichn1/d287-java-frameworks.git" target="_blank">Guitar Store Inventory (Java Frameworks Project)</a>
+            <div class="project-meta">Java · Spring Boot · HTML/CSS · Unit Testing</div>
+            <div class="project-desc">→ A Spring Boot application simulating a guitar store’s inventory with customized HTML interfaces, “Buy Now” purchase logic, max/min stock validation, sample data seeding, and comprehensive unit tests.</div>
+        </div>
+
+        <div class="project">
+            <a class="project-title" href="https://github.com/jakevichnis/linear_regression.git" target="_blank">AI Linear Regression</a>
+            <div class="project-meta">C++ · Machine Learning · Linear Regression</div>
+            <div class="project-desc">→ A C++ console program that conducts a political survey, trains a multiple linear regression model via gradient descent on historical CSV data, and predicts user political affiliation with file-based data persistence.</div>
+        </div>
+
+        <div class="project">
+            <a class="project-title" href="https://github.com/jakevichnis/library_website.git" target="_blank">Library Website</a>
+            <div class="project-meta">HTML · CSS · JavaScript</div>
+            <div class="project-desc">→ A fully responsive, multi-page web interface for a mock library, complete with dynamic gallery, contact form, and cart functionality powered by vanilla JavaScript and browser storage.</div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">UPCOMING – HFT Strategy Engine</div>
+            <div class="project-meta">C++ · Low-Latency · Market Data · Python (Prototyping)</div>
+            <div class="project-desc">→ A next-gen engine for high-frequency trading: core matching and execution written in C++ for ultra-low latency, with Python bindings for rapid strategy prototyping, real-time analytics, and risk management integration.</div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">UPCOMING – Advanced Java – Landon Hotel Localization</div>
+            <div class="project-meta">Java · Spring Boot · Angular · Multithreading · Docker</div>
+            <div class="project-desc">→ An enhanced Spring-Angular application featuring multithreaded English/French resource bundles, real-time time-zone conversion (ET/MT/UTC), and multi-currency display. Containerized via Docker for seamless deployment and backed by GitLab CI/CD.</div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">UPCOMING – Lightweight Quant Backtester</div>
+            <div class="project-meta">Python · Pandas · Backtesting · Strategy Prototyping</div>
+            <div class="project-desc">→ A lightweight Python-based backtesting engine that allows rapid development and simulation of quant trading strategies, with metrics tracking and data slicing via pandas.</div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">UPCOMING – ML Financial Signal Predictor</div>
+            <div class="project-meta">Python · Machine Learning · Sklearn · Time-Series</div>
+            <div class="project-desc">→ A predictive ML model trained on financial indicators and historical prices, leveraging sklearn pipelines and time-series cross-validation to generate actionable trade signals.</div>
+        </div>
+
+    </div>
 </body>
 </html>
