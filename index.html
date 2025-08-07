@@ -92,6 +92,56 @@
                 margin-bottom: 2.5rem; 
                 line-height: 1.6;
             }
+
+            /* For Mobile use */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem 2rem;
+            }
+
+            .logo {
+                margin-left: 0;
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+                font-size: 1.1rem;
+            }
+
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                margin: 2rem 1rem;
+                padding: 0;
+            }
+
+            .image-container {
+                margin: 0;
+                max-width: 80%;
+            }
+
+                .image-container img {
+                    width: 100%;
+                    height: auto;
+                }
+
+            .text {
+                margin-top: 0;
+                font-size: 1.1rem;
+                text-align: left;
+            }
+
+                .text p {
+                    margin-bottom: 1.5rem;
+                }
+        }
+
     </style>
 </head>
 <body>

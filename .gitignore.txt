@@ -1,0 +1,46 @@
+# Node / npm
+node_modules/
+dist/
+build/
+.env
+*.log
+
+# Visual Studio user-specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Compiled files
+*.class
+*.exe
+*.dll
+*.pyc
+*.o
+*.obj
+
+# Git metadata and backups
+*.swp
+*.bak
+*.tmp
+
+# MacOS
+.AppleDouble
+.LSOverride
+
+# VSCode
+.vscode/
+
+# IDE crash logs
+*.log
+*.pid
+
+# Personal junk
+*.zip
+*.7z
+*.rar
